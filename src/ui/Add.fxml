@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="213.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddController">
+   <bottom>
+      <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#add" text="Agregar" BorderPane.alignment="CENTER" />
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <right>
+      <Label BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Label text="Formulario" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox prefHeight="243.0" prefWidth="187.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" top="5.0" />
+         </padding>
+         <children>
+            <Label text="Fecha" underline="true" />
+            <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="197.0" />
+            <Label text="Tipo" underline="true" />
+            <RadioButton fx:id="radioBtnIngreso" mnemonicParsing="false" text="Ingreso">
+               <toggleGroup>
+                  <ToggleGroup fx:id="optionType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioBtnGasto" mnemonicParsing="false" text="Gasto" toggleGroup="$optionType" />
+            <Label text="Monto" underline="true" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="27.0" prefWidth="16.0" text="\$">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textMonto" prefHeight="25.0" prefWidth="173.0" />
+               </children>
+            </HBox>
+            <Label text="Descripción" underline="true" />
+            <TextField fx:id="textDescription" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

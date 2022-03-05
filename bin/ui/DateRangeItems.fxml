@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="373.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FinanceWithDateRangeController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="335.0" prefWidth="162.0" spacing="10.0" style="-fx-background-color: #212F3C;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="162.0">
+               <children>
+                  <Label text="Tu dinero: " textFill="#f4f6f7">
+                     <font>
+                        <Font name="Candara Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <Label alignment="CENTER" text="Balance" textFill="#ecf0f1">
+               <font>
+                  <Font name="Dubai Medium" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="162.0">
+               <children>
+                  <Label text="\$" textFill="#00a40b">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="balanceWithDateRange" prefHeight="27.0" prefWidth="102.0" text="Label" textFill="#f1c40f">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label text="Ingresos" textFill="#ecf0f1">
+               <font>
+                  <Font name="Dubai Medium" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="103.0" prefHeight="31.0" prefWidth="162.0">
+               <children>
+                  <Label text="\$" textFill="#00a40b">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="ingresosWithDateRange" prefHeight="27.0" prefWidth="101.0" text="Label" textFill="#52be80">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label text="Gastos" textFill="#ecf0f1">
+               <font>
+                  <Font name="Dubai Medium" size="20.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="182.0" prefHeight="31.0" prefWidth="162.0">
+               <children>
+                  <Label text="\$" textFill="#00a40b">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="gastosWithDateRange" prefHeight="27.0" prefWidth="102.0" text="Label" textFill="#e74c3c">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TableView fx:id="tableWithDateRange" prefHeight="363.0" prefWidth="310.0" style="-fx-background-color: #ECF0F1;" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="dateColumnDateR" prefWidth="75.0" text="Fecha" />
+            <TableColumn fx:id="typeColumnDateR" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="moneyColumnDateR" prefWidth="75.0" text="Monto" />
+            <TableColumn fx:id="descreptionColumnDateR" prefWidth="129.0" text="Descripción" />
+         </columns>
+      </TableView>
+   </center>
+   <padding>
+      <Insets bottom="8.0" />
+   </padding>
+   <top>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="517.0" spacing="20.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label text="Desde:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstDateToShow" prefHeight="27.0" prefWidth="120.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Hasta:">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="secondDateToShow" prefHeight="27.0" prefWidth="120.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+</BorderPane>
